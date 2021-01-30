@@ -30,7 +30,7 @@ Clone the repository and update the [p1reader.yaml](p1reader.yaml) with your own
 Prepare the microcontroller with ESPHome before you connect it to the circuit:
 - Install the `esphome` [command line tool](https://esphome.io/guides/getting_started_command_line.html)
 - Plug in the microcontroller to your USB port and run `esphome p1reader.yaml run` to flash the firmware
-  - Alternatively `esphome p1reader.yaml compile` followed by `esphome p1reader.yaml upload`. You might need to use sudo to access /dev/ttyUSB0
+  - Alternatively `esphome p1reader.yaml compile` followed by `esphome p1reader.yaml upload`. On Some Linux distros you might need to prefix upload command with sudo and full path to esphome binary in order to upload firmware via /dev/ttyUSB0
 - Remove the USB connection and connect the microcontroller to the rest of the circuit and plug it into the P1 port.
 - If everything works, your Home Assistant will now auto detect your new ESPHome integration.
 
