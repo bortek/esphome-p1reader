@@ -23,11 +23,14 @@ The circuit is very simple, basically the 5V TX output on the P1 connector is co
 ![Wiring Diagram](images/wiring.png)
 
 ## Installation
-Clone the repository and update the [p1reader.yaml](p1reader.yaml) with your own settings (wifi SSID and password and API password).
+Clone the repository and update the [p1reader.yaml](p1reader.yaml) with your own settings
+- Set your home wifi SSID and password as well as "fallback" wifi
+- Set API password
 
 Prepare the microcontroller with ESPHome before you connect it to the circuit:
 - Install the `esphome` [command line tool](https://esphome.io/guides/getting_started_command_line.html)
 - Plug in the microcontroller to your USB port and run `esphome p1reader.yaml run` to flash the firmware
+  - Alternatively `esphome p1reader.yaml compile` followed by `esphome p1reader.yaml upload`. You might need to use sudo to access /dev/ttyUSB0
 - Remove the USB connection and connect the microcontroller to the rest of the circuit and plug it into the P1 port.
 - If everything works, your Home Assistant will now auto detect your new ESPHome integration.
 
